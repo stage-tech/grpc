@@ -1,6 +1,5 @@
 """Loads the dependencies necessary for the external repositories defined in grpc_deps.bzl."""
 
-load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 load("@upb//bazel:workspace_deps.bzl", "upb_deps")
 load("@envoy_api//bazel:repositories.bzl", "api_dependencies")
 load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
@@ -26,8 +25,6 @@ def grpc_extra_deps():
     grpc_extra_deps()
     ```
     """
-    protobuf_deps()
-
     upb_deps()
 
     api_dependencies()
